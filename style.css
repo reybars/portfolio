@@ -1,12 +1,12 @@
 /* ############################ so header rani na part sa design ############################# */
-.header-container{
+.header-container {
     display: flex;
     align-items: flex-end;
     width: 100%;
     height: 160px;
 }
 
-.profile-picture{
+.profile-picture {
     align-self: flex-end;
     width: 130px;
     height: 130px;
@@ -20,26 +20,28 @@
     margin-left: 25px;
     margin-bottom: 10px;
 }
+
 .main-name {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #111111;
-  margin: 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111111;
+    margin: 0;
 }
 
 .sub-title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #555555;
-  margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #555555;
+    margin: 0;
 }
+
 #changing-title {
-  font-weight: 700;
-  color: #007acc;
+    font-weight: 700;
+    color: #007acc;
 }
 
 .header-contact-container {
-     margin-left: auto;
+    margin-left: auto;
     width: 300px;
     display: grid;
     grid-template-columns: 1fr;
@@ -53,29 +55,29 @@
     height: 40px;
 }
 
-.contact-logo{
+.contact-logo {
     width: 30px;
     height: auto;
 }
 
-hr{
+hr {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.sub-header{
+.sub-header {
     display: flex;
     width: 250px;
     margin-left: 25px;
 }
 
-.sub-header > img{
+.sub-header>img {
     width: 30px;
     height: auto;
 }
 
 /* ################################ global cleanup ######################## */
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1000px;
     margin: 0 auto;
@@ -84,80 +86,278 @@ body{
 }
 
 /* ################################ about me ######################## */
-.about-text{
+.about-text {
     margin: 0 25px;
     line-height: 1.6;
     color: #333;
 }
 
 /* ################################ skills ######################## */
-.skills-container{
+.skills-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin: 10px 25px 0;
 }
 
-.skill-category h4{
+.skill-category h4 {
     margin: 0 0 8px 0;
     color: #007acc;
 }
 
-.skill-category ul{
+.skill-category ul {
     margin: 0;
     padding-left: 20px;
 }
 
-.skill-category li{
+.skill-category li {
     margin-bottom: 4px;
     line-height: 1.4;
 }
 
-@media (max-width: 700px){
-    .skills-container{
+@media (max-width: 700px) {
+    .skills-container {
         grid-template-columns: 1fr;
     }
 }
 
 /* ################################ education ######################## */
-.education-container{
+.education-container {
     margin: 10px 25px 0;
 }
 
-.education-item{
+.education-item {
     margin-bottom: 15px;
 }
 
-.education-item h4{
+.education-item h4 {
     margin: 0;
 }
 
-.edu-meta{
+.edu-meta {
     color: #666;
     font-size: 0.9rem;
 }
 
+/* ################################ experience ######################## */
+.experience-container {
+    margin: 10px 25px 0;
+}
+
+.experience-item {
+    margin-bottom: 24px;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.exp-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    flex: 1 1 auto;
+}
+
+.exp-date {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111;
+    white-space: nowrap;
+}
+
+.exp-duties {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 10px 0;
+}
+
+.exp-duties li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 6px;
+    line-height: 1.5;
+    color: #222;
+}
+
+.exp-duties li::before {
+    content: "➢";
+    position: absolute;
+    left: 2px;
+    color: #b02a8f;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.exp-accomplishments {
+    margin-top: 8px;
+    margin-left: 12px;
+}
+
+.accomplishment-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.accomplishment-header h5 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.accomplishment-icon {
+    flex-shrink: 0;
+}
+
+.exp-accomplishments-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.exp-accomplishments-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 6px;
+    line-height: 1.5;
+    color: #222;
+}
+
+.exp-accomplishments-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 4px;
+    color: #e67e22;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .exp-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
 /* ################################ projects ######################## */
-.projects-container{
+.projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin: 10px 25px 0;
 }
 
-.project-item{
+.project-item {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 12px 15px;
 }
 
-.project-item h4{
+.project-item h4 {
     margin: 0 0 6px 0;
     color: #111;
 }
 
-@media (max-width: 700px){
-    .projects-container{
+.project-img-item {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.project-img-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.project-screenshot {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+.project-img-item:hover .project-screenshot {
+    transform: scale(1.02);
+}
+
+@media (max-width: 700px) {
+    .projects-container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ################################ footer ######################## */
+.footer-container {
+    margin: 10px 25px 40px;
+    padding-top: 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-name {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #007acc;
+}
+
+.footer-links img {
+    width: 20px;
+    height: auto;
+}
+
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .footer-links {
+        justify-content: center;
     }
 }
